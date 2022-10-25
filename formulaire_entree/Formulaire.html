@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumos</title>
+    <link rel="stylesheet" href="stylelumos.css">
+</head>
+
+<body>
+    <!--Haut de page-->
+    <header>
+        <div class="menu">
+            <!--<img class="imgmenulateral" src="menulateral.png">-->
+            <ul>
+                <li><a href="#"><img class="imgmenulateral" src="menulateral.png"></a>
+                    <ul>
+                        <li><a href="#">Tableau de bord</a></li>
+                        <li><a href="#">Information 1</a></li>
+                        <li><a href="#">Information 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="sectionlumos">
+            <img class="imglumos" src="lumos.png">
+        </div>
+        <div class="rechercher">
+            <form method="post" action="traitement.php">
+                <p>
+                    <input type="text" name="pseudo" id="pseudo" placeholder="Rechercher" size="30" maxlength="10" />
+                </p>
+            </form>
+        </div>
+    </header>
+
+
+    <form id=entry>
+		<table>
+
+        <tr>
+            <td>
+                <label for=date_d_embauche>Date d'embauche</label>
+            </td>
+            <td colspan="10" align="left">
+                <input id=date_d_embauche name=date_d_embauche type=text placeholder="jj/mm/aaaa" required autofocus>
+            </td>
+        </tr>
+          
+        <tr>
+            <td>
+                <label for=nom_et_prenom>Nom et prénom du futur collaborateur</label>
+            </td>
+            <td colspan="10" align="left">
+                <input id=nom_et_prenom name=nom_et_prenom type=text placeholder="Nom et prénom" required>
+            </td>
+        </tr>
+          
+        <tr>
+            <td rowspan="4" align="left">
+                <label for =BU>BU de rattachement</label>
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="BU" value="Holding"/>Lumiplan Holding
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="BU" value="Montagne"/>Lumiplan Montagne
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="BU" value="Transport Nantes"/>Lumiplan Transport Nantes
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="BU" value="Ville Nantes"/>Lumiplan Ville Nantes
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="BU" value="Duhamel"/>Lumiplan Duhamel
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="BU" value="Soridis"/>Lumiplan Soridis
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="BU" value="Transport Tours"/>Lumiplan Tours
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="BU" value="Ville Paris"/>Lumiplan Ville Paris
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label for=service>Service / Fonction</label>
+            </td>
+            <td colspan="10" align="left">
+                <input id=service name=service type=text>
+            </td>
+        </tr>
+
+        <tr> 
+            <td>
+                <label for=manager>Nom et prénom du Manager</label>
+            </td> 
+            <td colspan="10" align="left">
+                <input id=manager name=manager type=text>
+            </td>
+        </tr>
+         
+        <tr> 
+            <td>
+                <label for=contrat>Nature contrat</label>
+            </td>
+            <td colspan="2" align="left">
+                <input type="checkbox" name="contrat" value="CDI"/>CDI
+            </td>
+            <td colspan="2" align="left">
+                <input type="checkbox" name="contrat" value="CDD"/>CDD*
+            </td>
+            <td colspan="2" align="left">
+                <input type="checkbox" name="contrat" value="stage"/>Stage*
+            </td>
+            <td colspan="2" align="left">
+                <input type="checkbox" name="contrat" value="alternance"/>Alternance*
+            </td>
+            <td colspan="2" align="left">
+                <input type="checkbox" name="contrat" value="prestataire"/>Prestataire*
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="date_fin">*Date de fin</label>
+            </td>
+            <td colspan="10" align="left">
+                <input id="date_fin" name="date_fin" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="11" align="left">
+                <div class="commentaire">
+                    <textarea id="commentaires1" name="commentaires1" cols="100" rows="3" placeholder="COMMENTAIRES :"></textarea>
+                </div>
+            </td>
+        </tr>
+
+        <th colspan="11">CHECK LIST MATERIEL</th>
+
+        <tr>
+            <td>
+                <label for="achat_pc">Achat PC</label>
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="achat_pc" value="oui"/>Oui
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="achat_pc" value="non"/>Non
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="specification_pc">Spécifications particulières</label>
+            </td>
+            <td colspan="10">
+                <input type="text" id="specification_pc" name="specification_pc">
+            </td>
+        </tr>
+      
+        <tr>
+            <td>
+                <label for="achat_pc">Achat téléphone mobile</label>
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="achat_tel" value="oui"/>Oui
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="achat_tel" value="non"/>Non
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="specification_tel">Spécifications particulières</label>
+            </td>
+            <td colspan="10">
+                <input type="text" id="specification_tel" name="specification_tel">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="ligne_fixe">Ligne Fixe</label>
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="ligne_fixe" value="oui"/>Oui
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="ligne_fixe" value="non"/>Non
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="specification_fixe">Spécifications particulières</label>
+            </td>
+            <td colspan="10">
+                <input type="text" id="specification_fixe" name="specification_fixe">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="equipement_individuel">Equipement de protection individuelle</label>
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="equipement_individuel" value="oui"/>Oui,Besoin : Casque, gants
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="equipement_individuel" value="non"/>Non
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="11" align="left">
+                <div class="commentaire">
+                    <textarea id="commentaires2" name="commentaires2" cols="100" rows="3" placeholder="COMMENTAIRES OU BESOINS SPECIFIQUES :"></textarea>
+                </div>
+            </td>
+        </tr>
+
+        <th colspan="11">CHECK LIST OUTILS</th>
+
+        <tr>
+            <td colspan="6" align="left">
+                <input type="checkbox" name="mail" value="mail"/>Email/Liste de diffusion : Teammaintenance, techniciens maintenance
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="erp" value="erp"/>ERP
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="6" align="left">
+                <input type="checkbox" name="annuaire" value="annuaire"/>Annuaire
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="jira" value="jira"/>Jira
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="6" align="left">
+                <input type="checkbox" name="sirh" value="sirh"/>SIRH
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="sciforma" value="sciforma"/>Sciforma
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="6" align="left">
+                <input type="checkbox" name="avexia" value="avexia"/>Avexia - Uvet (déplacements)
+            </td>
+            <td colspan="5" align="left">
+                <input type="checkbox" name="sales_force" value="sales_force"/>Sales Force
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="11" align="left">
+                <input type="checkbox" name="praxedo" value="praxedo"/>Praxédo
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="11" align="left">
+                <div class="commentaire">
+                    <textarea id="commentaires3" name="commentaires3" cols="100" rows="3" placeholder="COMMENTAIRES :"></textarea>
+                </div>
+            </td>
+        </tr>
+
+        </table>
+        
+    </form>
+</body>
