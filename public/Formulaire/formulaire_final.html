@@ -13,18 +13,10 @@
         <div class="sectionlumos">
             <img class="imglumos" src="../assets/lumos.png">
         </div>
-        <script type="text/javascript" src="formulaire.js"></script>
-        <div class="rechercher">
-            <form method="post" action="traitement.php">
-                <p>
-                    <input type="text" name="pseudo" id="pseudo" placeholder="Rechercher" size="30" maxlength="10" />
-                </p>
-            </form>
-        </div>
-
-        </div>
+        <script type="module" src="donnees.js"></script>
     </header>
 
+    <!-- Formulaire d'entrée de collaborateur-->
 
 <form id="entry" method="post">
     <div class="tab">
@@ -37,7 +29,7 @@
         <div class="row">   
             <div class="cell0">
                 <label for="date_d_embauche">Date d'embauche <br>
-                    <input id="date_d_embauche name" name="date_d_embauche" type="date" autofocus>
+                    <input id="date_d_embauche" name="date_d_embauche" type="date" autofocus>
                 </label>
             </div>
             <div class="cell0">
@@ -149,6 +141,8 @@
         </div>
 
         <div class="row">
+
+            <!-- Cette case n'apparait pas si le contrat est un CDI ou si rien n'est choisi, sinon elle apparait-->
             
             <div class="cell0" id="cell2">
                 <script>
@@ -213,7 +207,10 @@
             <div class="cell0">
             </div>
             <div class="cell0">
-                <input type="submit" onclick="JavaScript:sendData()">
+                <input type="submit" value="Sauvegarder">
+            </div>
+            <div class="cell0">
+                <input type="submit" onclick="sendData()"><script type=module src="./donnees.js"></script>
             </div>
         </div>
 
